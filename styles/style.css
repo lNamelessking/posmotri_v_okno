@@ -104,21 +104,25 @@ fieldset {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #FFF;
+  outline: 1px solid currentColor;
   outline-offset: 3px;
+}
+
+.search-form__label:active {
+  outline: none;
 }
 
 .search-form__textfield {
   background-color: transparent;
   border:none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   font-family: inherit;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   width: 225px;
   appearance: none;
-  color: #FFF;
+  color: currentColor;
 }
 
 .search-form__textfield::placeholder {
@@ -130,7 +134,7 @@ fieldset {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
 }
 
 .search-form__textfield:focus {
@@ -149,7 +153,7 @@ fieldset {
 }
 
 .search-form__checkbox:has(:focus-visible) {
-  outline: 1px solid #FFF;
+  outline: 1px solid currentColor;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -162,7 +166,7 @@ fieldset {
   display: inline-block;
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   cursor: pointer;
   margin-right: 5px;
 }
@@ -172,20 +176,20 @@ fieldset {
   width: 15px;
   height: 15px;
   content: "";
-  background-color: #FFF;
+  background-color: currentColor;
   margin: 1px;
 }
 
 .button {
-  color: #FFF;
+  color: currentColor;
   text-align: center;
   font-family: "Fira Sans Condensed", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: inherit;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   background: transparent;
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
   cursor: pointer;
   padding: 6px 0;
 }
@@ -204,8 +208,8 @@ fieldset {
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 1px;
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
 }
 
 .search-form__submit-button {
@@ -245,7 +249,7 @@ fieldset {
 .content__card-link {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: currentColor;
   margin:2px;
 }
 
@@ -267,7 +271,7 @@ fieldset {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #FFF;
+  outline: 1px solid currentColor;
 }
 
 .content__video-card {
@@ -286,7 +290,7 @@ fieldset {
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
-  color: #fff;
+  color: currentColor;
   text-transform: uppercase;
   margin: 0 0 6px 0;
 }
@@ -294,9 +298,9 @@ fieldset {
 .content__video-card-description {
   font-family: "Fira Sans Condensed", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: inherit;
   line-height: 16.2px;
-  color: #fff;
+  color: currentColor;
 }
 
 .content__video-card-thumbnail {
@@ -308,6 +312,6 @@ fieldset {
 }
 
 .more-button {
-  width: 100%;
-  margin-top: 32px;
+  width: calc(100% - 8px);
+  margin: 32px 4px 4px 4px;
 }
